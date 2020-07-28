@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>shoppage</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <script type="text/javascript" src="./js/shop.js"></script>
+    <script src="https://unpkg.com/stein-js-client"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./css/news.css">
+    <link rel="stylesheet" type="text/css" href="./css/shop.css">
+</head>
+<body>
+
+<header id="global-head">
+    <a href="./"><img src="./images/simple_logo.svg"></a>
+</header>
+
+<div id="nav-toggle">
+	<div>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+
+<aside id="sidebar">
+	<nav id="global-nav">
+		<ul>
+            <li><a href="./index.html">ホーム</a></li>
+            <li><a href="./shops.html">使えるお店</a></li>
+            <li><a href="./company.html">バイントについて</a></li>
+            <li><a href="./news.html">新着情報</a></li>
+		</ul>
+	</nav>
+</aside>
+
+<main id="main">
+	<div id="main-in">
+		<section class="section">
+            <div class="title">
+                <h3>使えるお店</h3>
+            </div>
+            <h4 class="sub-main font-weight-bold">お店を探す</h4>
+            <div class="search-wrapper">
+                <div class="search-icon">
+                    <a href="./search.html"><img src="./images/shop_genre.png" style="width: 50%;">
+                    <p><span class="search-sub">ジャンル</span>から探す</p></a>
+                </div>
+                <div class="search-icon" data-toggle="modal" data-target="#current-location">
+                    <img src="./images/shop_here.png" style="width: 50%;">
+                    <p><span class="search-sub">地図</span>から探す</p>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="special">
+                <h4 class="sub-main font-weight-bold">特集</h4>
+                <div class="container">
+                    <div class="row stein-container" id="stein-item">
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div data-stein-url="https://api.steinhq.com/v1/storages/5efa0b1083c30d0425e2c586/'test'">
+            </div>
+
+            <script src="https://unpkg.com/stein-expedite@0.0.1/dist/index.js"></script>
+
+            <!-- モーダルの設定 -->
+            <div class="modal fade" id="current-location" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="map"></div>
+                    </div>
+                </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+		</section>
+	</div><!-- /#main-in -->
+</main>
+
+<div id="overlay"></div>
+
+<footer>
+    <div class="container">
+      <div class="row">
+
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                <a href="./index.html"><span class="logo">B Y N T</span></a>
+            </div>
+
+               <div class="col-md-8 col-sm-6 col-xs-12">
+                <ul class="menu">
+                     <span>Menu</span>
+                     <li>
+                        <p>お問い合わせ</p>
+                        <ol>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScVTY_dKx0mj50IAC--dDKvq-1t4FSdpaqpU8Ob4fuQ8zP9Xw/viewform?usp=sf_link">加盟店様</a></li>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScpe2Vz5SKwelc_H6WnIMn_BZZpPM2wwwHYJ8w02aXR07L5cw/viewform?usp=sf_link">利用者様</a></li>
+                        </ol>
+                      </li>
+                      <li>
+                         <a href="./privacy.html">プライバシーポリシー</a>
+                      </li>
+                      <li>
+                        <a href="./terms.html">利用規約</a>
+                      </li>
+                      <li>
+                        <a href="./store_terms.html">加盟店規約</a>
+                      </li>
+                      <li>
+                         <a href="./profile.html">企業概要</a>
+                      </li>
+                 </ul>
+            </div>
+
+               <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+                 <ul class="address">
+                       <span>Contact</span>
+                       <li>
+                          <i class="fa fa-phone" aria-hidden="true"></i> <a href="#">Phone</a>
+                       </li>
+                       <li>
+                          <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="#">Adress</a>
+                       </li>
+                       <li>
+                          <i class="fa fa-envelope" aria-hidden="true"></i> <a href="#">Email</a>
+                       </li>
+                  </ul>
+              </div> -->
+
+          </div>
+       </div>
+   </footer>
+
+<!-- Stainとの連携 -->
+<script src="https://unpkg.com/stein-js-client"></script>
+
+<!-- Google Map API -->
+<script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyA0UNvZ7Sclorcaa5cIDy3T3jP4WYrcyic&callback=initMap" async defer></script>
+
+</body>
+</html>

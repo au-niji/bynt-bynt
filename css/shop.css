@@ -1,0 +1,79 @@
+body {
+    background-color: #eee;
+}
+
+h1 {
+    padding: 10px;
+}
+
+.search-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: flex-end;
+    position: relative;
+}
+
+.search-icon {
+    width: 100%;
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    background: #faf8f5;
+    border: solid 1.5px #EEEEEE;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.search-icon p {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    color: black;
+}
+
+.search-sub {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+h4 {
+    margin-left: 2%;
+    font-size: 17px;
+}
+
+/* 特集 */
+.special-container {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    /* justify-content: space-around; */
+    align-items: flex-end;
+    position: relative;
+}
+
+.special-content {
+    width: 95%;
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    border: solid 1.5px #EEEEEE;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1px;
+}
+
+.day {
+    font-size: 12px;
+}
+
+.shop-name {
+    position: relative;
+    padding: .3em;
+    text-align: center;
+    font-size: 20px;
+}
+
